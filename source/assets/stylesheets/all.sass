@@ -1,0 +1,81 @@
+@import compass
+@import foundation/scss/normalize
+@import foundation_settings
+@import foundation/scss/foundation
+@import pace/themes/orange/pace-theme-center-simple
+@import "http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
+
+@font-face
+  font-family: 'icomoon'
+  src: url('../fonts/icomoon.eot?bpmp7g')
+  src: url('../fonts/icomoon.eot?#iefixbpmp7g') format("embedded-opentype"), url('../fonts/icomoon.woff?bpmp7g') format("woff"), url('../fonts/icomoon.ttf?bpmp7g') format("truetype"), url('../fonts/icomoon.svg?bpmp7g#icomoon') format("svg")
+  font-weight: normal
+  font-style: normal
+
+$blue: #0188cc
+$red: #fa4b2a
+
+body
+  -webkit-font-smoothing: antialiased !important
+  -moz-osx-font-smoothing: grayscale !important
+  text-shadow: 1px 1px 1px rgba(black, .004)
+  background: #f0ede3
+
+h1
+  padding: rem-calc(100) 0
+  color: $red
+  margin: 0
+
+#main-footer
+  background: lighten(black, 20%)
+  padding: rem-calc(100) 0
+  color: darken(white, 25%)
+  margin-top: rem-calc(100)
+
+.footer-content
+  font-size: .8em
+
+  a
+    color: white
+    +transition(all, .2s)
+
+    &:hover
+      color: darken(white, 50%)
+
+[class^="icon-"],
+[class*=" icon-"]
+  speak: none
+  font:
+    family: 'icomoon'
+    style: normal
+    weight: normal
+    variant: normal
+    size: .85em
+  text-transform: none
+  line-height: 1
+
+.icon-heart:before
+  content: "\e600"
+  color: $red
+
+.accordion-content
+  padding: rem-calc(15) 0
+
+  .content
+    padding: rem-calc(25)
+    background: white
+    +border-radius(7px)
+    +box-shadow(1px 1px 5px rgba(black, .25))
+
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+
+    ol
+      li
+        + li
+          margin-top: rem-calc(20)
+
+  + h3
+    margin-top: rem-calc(25)

@@ -1,0 +1,6 @@
+section1:
+  title: What's on the inside
+  partial: included_packages
+section2:
+  title: Getting started
+  partial: getting_started

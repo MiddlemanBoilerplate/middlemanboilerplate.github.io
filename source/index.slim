@@ -1,0 +1,12 @@
+---
+title : Welcome to Middleman
+---
+
+.container
+  h1.text-center MiddlemanBoilerplate
+  #accordion
+    - data.sections.each do |name, section|
+      h3= section.title
+      .accordion-content
+        .content
+          = partial section.partial

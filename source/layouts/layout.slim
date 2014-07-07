@@ -1,0 +1,10 @@
+= wrap_layout :base do
+  .container
+    .row
+      .columns.small-12
+        == yield
+
+  footer#main-footer
+    .row
+      .columns.small-12
+        .footer-content.text-center created with <span class="icon-heart"></span> using #{link_to 'Middleman', 'http://middlemanapp.com'} and #{link_to 'Foundation', 'http://foundation.zurb.com'}.
