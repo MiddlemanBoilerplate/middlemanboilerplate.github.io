@@ -1,0 +1,91 @@
+= form_tag '/', method: :get
+  .row
+    .columns.small-12
+      fieldset
+        h5 Javacsripts
+        .row
+          .columns.medium-4.large-3
+            .switch.round.tiny.left
+              = radio_button_tag :js, value: 'jquery', checked: true, id: 'js-jquery'
+              label for="js-jquery"
+            label for="js-jquery" jQuery
+          .columns.medium-4.large-3
+            .switch.round.tiny.left
+              = radio_button_tag :js, value: 'angular', id: 'js-angular', disabled: true
+              label for="js-angular"
+            label for="js-angular" AngularJS #{link_to '?', 'javascript:;', title: 'coming soon', target: '_blank'}
+          .columns.end
+      fieldset.hidden
+        h5 Pre-installed jQuery Libraries
+        .row
+          .columns.medium-4.large-3
+            .switch.radius.tiny.left
+              = check_box_tag :lib_jqueryui, value: true, checked: true, id: 'jquery_lib-jqueryui'
+              label for="jquery_lib-jqueryui"
+            label for="jquery_lib-jqueryui" jQuery UI
+          .columns.medium-4.large-3
+            .switch.radius.tiny.left
+              = check_box_tag :lib_jquerymobile, value: true, id: 'jquery_lib-jquerymobile'
+              label for="jquery_lib-jquerymobile"
+            label for="jquery_lib-jquerymobile" jQuery Mobile
+          .columns.end
+      fieldset
+        h5 CSS
+        .row
+          .columns.medium-4.large-3
+            .switch.round.tiny.left
+              = radio_button_tag :css, value: 'foundation', checked: true, id: 'css-foundation'
+              label for="css-foundation"
+            label for="css-foundation" Foundation
+          .columns.medium-4.large-3
+            .switch.round.tiny.left
+              = radio_button_tag :css, value: 'bootstrap', checked: true, id: 'css-bootstrap'
+              label for="css-bootstrap"
+            label for="css-bootstrap" Bootstrap
+          .columns.end
+      fieldset
+        h5 SASS Mixin Library
+        .row
+          .columns.medium-4.large-3
+            .switch.radius.tiny.left
+              = check_box_tag :mixin_compass, value: true, checked: true, disabled: true, id: 'mixin-compass'
+              label for="mixin-compass"
+            label for="mixin-compass" Compass
+          .columns.medium-4.large-3
+            .switch.radius.tiny.left
+              = check_box_tag :mixin_bourbon, value: true, id: 'mixin-bourbon'
+              label for="mixin-bourbon"
+            label for="mixin-bourbon" Bourbon
+          .columns.end
+      fieldset
+        h5 Add-on
+        .row
+          .columns.medium-4
+            .switch.radius.tiny.left
+              = check_box_tag :addon_deploy, value: true, id: 'addon-deploy'
+              label for="addon-deploy"
+            label for="addon-deploy" Middleman Deploy #{link_to '?', '', title: 'asd'}
+          .columns.medium-4
+            .switch.radius.tiny.left
+              = check_box_tag :addon_heroku, value: true, checked: true, id: 'addon-heroku'
+              label for="addon-heroku"
+            label for="addon-heroku" Heroku Deployment Script #{link_to '?', '', title: 'asd lorem ipsum dolor sit amet asd lorem ipsum dolor sit amet '}
+          .columns.end
+          .columns.medium-4
+            .switch.radius.tiny.left
+              = check_box_tag :addon_modernizr, value: true, checked: true, id: 'addon-modernizr'
+              label for="addon-modernizr"
+            label for="addon-modernizr" Modernizr #{link_to '?', '', title: 'modernizr'}
+          .columns.medium-4
+            .switch.radius.tiny.left
+              = check_box_tag :addon_turbolinks, value: true, checked: true, id: 'addon-turbolinks'
+              label for="addon-turbolinks"
+            label for="addon-turbolinks" Turbolinks #{link_to '?', '', title: 'asd'}
+          .columns.medium-4
+            .switch.radius.tiny.left
+              = check_box_tag :addon_pace, value: true, id: 'addon-pace'
+              label for="addon-pace"
+            label for="addon-pace" Pace #{link_to '?', '', title: 'asd'}
+          .columns.end
+      fieldset
+        = link_to 'Download Template', '', class: 'button expand radius large'

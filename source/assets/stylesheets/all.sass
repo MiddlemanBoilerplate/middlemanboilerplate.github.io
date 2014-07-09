@@ -2,8 +2,8 @@
 @import foundation/scss/normalize
 @import foundation_settings
 @import foundation/scss/foundation
-@import pace/themes/orange/pace-theme-center-simple
-@import "http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
+@import pace/themes/orange/pace-theme-minimal
+@import "http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600|Open+Sans+Condensed:300"
 
 @font-face
   font-family: 'icomoon'
@@ -22,9 +22,32 @@ body
   background: #f0ede3
 
 h1
-  padding: rem-calc(100) 0
+  padding: rem-calc(100) 0 rem-calc(25)
   color: $red
   margin: 0
+
+  span
+    font:
+      weight: 300
+      family: join('Open Sans Condensed', $body-font-family)
+      size: .8em
+    color: lighten(black, 25%)
+
+h2
+  margin: 0 auto
+  padding: 0 0 rem-calc(100)
+  font-size: 1em
+  max-width: 500px
+
+h5
+  font:
+    size: .9em
+    weight: 600
+  text-transform: uppercase
+  margin: rem-calc(0 0 10)
+
+fieldset + fieldset
+  margin-top: rem-calc(25)
 
 #main-footer
   background: lighten(black, 20%)
@@ -58,6 +81,31 @@ h1
   content: "\e600"
   color: $red
 
+.icon-link:before
+  content: "\e601"
+  font-size: .8em
+  padding-right: rem-calc(10)
+
+.ui-accordion-header
+  cursor: pointer
+  outline: none !important
+
+.ui-accordion-header-active
+  .icon-link:before
+    color: $red
+
+h3
+  margin: 0
+
+  &.red
+    color: $red
+    padding: rem-calc(100 0 25)
+    font-size: 1.2em
+
+#lovethis
+  h4
+    font-size: 1em
+
 .accordion-content
   padding: rem-calc(15) 0
 
@@ -79,3 +127,50 @@ h1
 
   + h3
     margin-top: rem-calc(25)
+
+.github-badge
+  position: fixed
+  top: 0
+  right: 0
+  border: 0
+  z-index: 1
+
+.switch + label
+  margin-left: rem-calc(58)
+  line-height: 1.5rem
+
+label a
+  text-indent: -9999px
+  overflow: hidden
+  font-weight: 600
+  color: white
+  padding: 0 rem-calc(7)
+  +border-radius(2px)
+  background: $blue
+  +transition(background .2s)
+
+  &:hover
+    background: darken($blue, 10%)
+    color: white
+
+.button
+  margin-bottom: 0
+
+.ui-tooltip
+  padding: rem-calc(5 10)
+  position: absolute
+  z-index: 99
+  background: rgba(black, .75)
+  color: white
+  font-size: .9em
+  +border-radius(3px)
+
+code
+  background: darken(white, 10%)
+  +border-radius(3px)
+  padding: rem-calc(0 10)
+  line-height: 2
+  display: block
+
+  .icon-link:before
+    font-size: 1em

@@ -10,7 +10,9 @@
 // $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import "foundation/scss/foundation/functions";
+@import "foundation/functions";
+
+// $experimental: true;
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -28,10 +30,10 @@
 // $include-print-styles: true;
 // $include-html-global-classes: $include-html-classes;
 
-// Grid
+// Grid 
 
-// $include-html-block-grid-classes: $include-html-classes;
-$include-xl-html-grid-classes: true;
+// $include-html-block-grid-classes: $include-html-classes; 
+// $include-xl-html-grid-classes: false;
 
 // $row-width: rem-calc(1000);
 // $total-columns: 12;
@@ -45,7 +47,7 @@ $include-xl-html-grid-classes: true;
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-$body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -539,11 +541,11 @@ $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial,
 // $input-include-glowing-effect: true;
 
 // We use these to style the fieldset border and spacing.
-$fieldset-border-style: none;
+// $fieldset-border-style: solid;
 // $fieldset-border-width: 1px;
 // $fieldset-border-color: #ddd;
-$fieldset-padding: 0;
-$fieldset-margin: 0;
+// $fieldset-padding: rem-calc(20);
+// $fieldset-margin: rem-calc(18 0);
 
 // We use these to style the legends when you use them
 // $legend-bg: #fff;
@@ -1076,7 +1078,7 @@ $fieldset-margin: 0;
 // $switch-paddle-border-style: solid;
 // $switch-paddle-transition-speed: .1s;
 // $switch-paddle-transition-ease: ease-out;
-$switch-active-color: scale-color(#fa4b2a, $lightness: -25%);
+// $switch-positive-color: scale-color($success-color, $lightness: 94%);
 // $switch-negative-color: #f5f5f5;
 
 // Outline Style for tabbing through switches

@@ -1,6 +1,9 @@
 section1:
-  title: What's on the inside
+  title: What's inside
   partial: included_packages
 section2:
-  title: Getting started
+  title: Documentation
   partial: getting_started
+section3:
+  title: The Generator
+  partial: generator

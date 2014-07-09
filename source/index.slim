@@ -1,12 +1,15 @@
 ---
-title : Welcome to Middleman
+title : Just another jump-start template
 ---
 
 .container
-  h1.text-center MiddlemanBoilerplate
+  h1.text-center Middleman<span>Boilerplate</span>
+  h2.text-center Building static site never been easier with #{link_to 'Middleman', 'http://middlemanapp.com'}, even easier and faster, with the jump-start templates for Middleman.
   #accordion
     - data.sections.each do |name, section|
-      h3= section.title
+      h3
+        span.icon-link
+        = section.title
       .accordion-content
         .content
           = partial section.partial
