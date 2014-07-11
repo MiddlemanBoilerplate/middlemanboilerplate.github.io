@@ -48,9 +48,9 @@
         .row
           .columns.medium-4.large-3
             .switch.radius.tiny.left
-              = check_box_tag :mixin_compass, value: true, checked: true, disabled: true, id: 'mixin-compass'
+              = check_box_tag :mixin_compass, value: true, checked: true, id: 'mixin-compass'
               label for="mixin-compass"
-            label for="mixin-compass" Compass
+            label for="mixin-compass" Compass #{link_to '?', 'http://compass-style.org', title: 'by default, Compass are enabled in Middleman. Click for more info & docs'}
           .columns.medium-4.large-3
             .switch.radius.tiny.left
               = check_box_tag :mixin_bourbon, value: true, id: 'mixin-bourbon'

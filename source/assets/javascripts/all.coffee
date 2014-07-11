@@ -24,8 +24,8 @@ $(document).on 'ready page:load', ->
     activate: (e, ui) ->
       $(document).tooltip
         position:
-          my: 'bottom-5'
-          collision: 'flip fit'
+          my: 'bottom-15'
+          at: 'left bottom'
         track: true
       return
 
